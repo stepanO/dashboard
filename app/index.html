@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/font-awesome-less/css/font-awesome.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="//localhost:35729/livereload.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="wrapper" ng-controller="mainCtrl as ctrl">
+    <div class="flex-row header">
+        <div class="search"><input class="search-input"></div>
+        <a href="#" class="logo"><img src="image/logo.png"></a>
+
+        <div class="personal">
+            <button class="mail"></button>
+        </div>
+    </div>
+    <div class="panel-content">
+        <div class="flex-column panel-left">
+            <div class="user-info" flex>
+                <div class="circle"></div>
+                <div class="user-name">
+                    <strong>
+                        <div>Welcome</div>
+                        <div>Kathleen Martin</div>
+                    </strong>
+                </div>
+            </div>
+            <ul class="left-nav">
+                <li class="tab-nav" ng-class="{active: tab.active}" ng-click="ctrl.toggleTab(tab)"
+                    ng-repeat="tab in ctrl.tabs"><i class="fa {{tab.icon}}"
+                                                    aria-hidden="true"></i><span>{{tab.name}}</span></li>
+            </ul>
+        </div>
+        <div class="flex-column panel-main" flex>
+            <div class="flex-row top" flex>
+                <ul class="nav" flex>
+                    <li class="nav-button active">
+                        <a href>OVERVIEW</a>
+                    </li>
+                    <li class="nav-button active">
+                        <a href>OVERVIEW</a>
+                    </li>
+                    <li class="nav-button active">
+                        <a href>OVERVIEW</a>
+                    </li>
+                    <li class="nav-button active">
+                        <a href>OVERVIEW</a>
+                    </li>
+                    <li class="nav-button active">
+                        <a href>OVERVIEW</a>
+                    </li>
+                    <!--<li class="nav-button active">-->
+                    <!--<a href>OVERVIEW</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-button active">-->
+                    <!--<a href>OVERVIEW</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-button active">-->
+                    <!--<a href>OVERVIEW</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-button active">-->
+                    <!--<a href>OVERVIEW</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-button active">-->
+                    <!--<a href>OVERVIEW</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="flex-row middle" flex>
+                <div class="block block-traffic">
+                    <img src="image/graph.png">
+                </div>
+                <div class="block block-referrer">
+                    <img src="image/referrer.png">
+                </div>
+                <div class="block block-bookings">
+                    <img src="image/bookings.png">
+                </div>
+                <div class="block block-calendar">
+                    <img src="image/calendar.png">
+                </div>
+                <div class="block block-task">
+                    <img src="image/task.png">
+                </div>
+            </div>
+            <div class="flex-row bottom">
+                <div>
+                    footer
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="mainCtrl.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

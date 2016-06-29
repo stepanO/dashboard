@@ -1,0 +1,141 @@
+ul {
+  padding: 0;
+}
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  flex: 1 100%;
+  flex-direction: column;
+}
+[flex] {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color: #32383d;
+  justify-content: space-between;
+}
+.header .search {
+  flex-grow: 1;
+}
+.header .logo {
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+}
+.header .logo img {
+  width: 60px;
+  height: 60px;
+}
+.header .personal {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.panel-left {
+  width: 350px;
+  background-color: #f5f5f5;
+}
+.panel-left .user-info {
+  margin: 10px 10px 0;
+  align-items: center;
+}
+.panel-left .user-info .circle {
+  margin-right: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #1ac6b4;
+}
+.panel-left .tab-nav:first-child {
+  border-top: 1px solid #cecece;
+}
+.panel-left .left-nav .tab-nav {
+  border-bottom: 1px solid #cecece;
+  padding: 14px;
+}
+.panel-left .left-nav .tab-nav.active {
+  background-color: #1ac6b4;
+  color: #f5f5f5;
+}
+.panel-left .left-nav .tab-nav .fa {
+  font-size: 24px;
+  padding-right: 10px;
+}
+.panel-left .left-nav .tab-nav:hover {
+  background-color: #dcdcdc;
+  font-size: 18px;
+  transition: color 0.3s, font-size 0.3s;
+}
+.panel-left .left-nav .tab-nav:hover.active {
+  background-color: #2fe4d1;
+}
+.panel-content {
+  flex: 1 100%;
+  flex-direction: row;
+  display: flex;
+}
+.panel-main {
+  flex: 1 100%;
+  background-color: #fff;
+}
+.panel-main .middle {
+  display: inline-flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+.panel-main .middle .block {
+  padding: 0px 10px 10px 0;
+}
+.top {
+  align-items: center;
+}
+.top .nav {
+  font-weight: 800;
+  color: #fff;
+  margin-left: 0px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.top .nav .nav-button {
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid #ececec;
+}
+.top .nav .nav-button a {
+  text-decoration: none;
+}
+.top .nav .nav-button a:visited,
+.top .nav .nav-button a:link {
+  color: #32383d;
+}
+.top .nav .nav-button:hover {
+  background-color: #dcdcdc;
+}
+.bottom {
+  background-color: #fffb56;
+}
+ul {
+  list-style: none;
+}
