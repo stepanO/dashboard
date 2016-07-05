@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dashboard</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <link rel="stylesheet" href="bower_components/font-awesome-less/css/font-awesome.css">
     <link rel="stylesheet" href="style/main.css">
     <script src="//localhost:35729/livereload.js"></script>
@@ -36,9 +35,43 @@
                 </div>
             </div>
             <ul class="left-nav">
-                <li class="tab-nav" ng-class="{active: tab.active}" ng-click="ctrl.toggleTab(tab)"
-                    ng-repeat="tab in ctrl.tabs"><i class="fa {{tab.icon}}"
-                                                    aria-hidden="true"></i><span>{{tab.name}}</span></li>
+                <li class="tab-nav active">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>My Profile</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Active Signals</span>
+                </li>
+                <li class="tab-nav" >
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Visual Charts</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    <span>Earnings</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <span>Events</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                    <span>Cloud Systems</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                    <span>System Settings</span>
+                </li>
+                <li class="tab-nav">
+                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                    <span>Logout</span>
+                </li>
+
             </ul>
         </div>
         <div class="flex-column panel-main" flex>

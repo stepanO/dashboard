@@ -1,18 +1,12 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "dashboard",
+  "description": "Test dashboard",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "homepage": "https://github.com/stepanO/dashboard.git",
+  "license": "",
   "private": true,
   "dependencies": {
-    "angular": "~1.4.0",
-    "angular-route": "~1.4.0",
-    "angular-loader": "~1.4.0",
-    "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0",
     "font-awesome-less": "~0.1.0",
-    "lodash": "~4.13.1",
     "font-awesome": "~4.6.3"
   }
 }

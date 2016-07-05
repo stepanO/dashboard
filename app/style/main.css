@@ -29,7 +29,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  height: 90px;
+  height: 55px;
   background-color: #32383d;
   justify-content: space-between;
 }
@@ -38,7 +38,7 @@ body {
   color: #fbfbfb;
   background-color: #1a1e21;
   border-radius: 15px;
-  padding: 10px;
+  padding: 5px 10px;
 }
 .header .search input {
   border: 0;
@@ -54,10 +54,8 @@ body {
   justify-content: center;
 }
 .header .logo img {
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  min-height: 60px;
+  width: 40px;
+  height: 40px;
 }
 .header .personal {
   background-color: #1a1e21;
@@ -65,9 +63,9 @@ body {
   justify-content: flex-end;
 }
 .header .personal > a i {
-  font-size: 42px;
+  font-size: 32px;
   color: #fdfdfd;
-  margin: 40px;
+  margin: 30px;
 }
 .panel-left {
   width: 300px;
