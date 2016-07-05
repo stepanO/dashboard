@@ -12,6 +12,7 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "font-awesome-less": "~0.1.0",
-    "lodash": "~4.13.1"
+    "lodash": "~4.13.1",
+    "font-awesome": "~4.6.3"
   }
 }

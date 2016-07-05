@@ -34,7 +34,19 @@ body {
   justify-content: space-between;
 }
 .header .search {
-  flex-grow: 1;
+  margin: 20px;
+  color: #fbfbfb;
+  background-color: #1a1e21;
+  border-radius: 15px;
+  padding: 10px;
+}
+.header .search input {
+  border: 0;
+  background-color: #1a1e21;
+  color: #fbfbfb;
+}
+.header .search input:focus {
+  outline: 0;
 }
 .header .logo {
   flex-grow: 0;
@@ -46,9 +58,14 @@ body {
   height: 60px;
 }
 .header .personal {
-  flex-grow: 1;
+  background-color: #1a1e21;
   display: flex;
   justify-content: flex-end;
+}
+.header .personal > a i {
+  font-size: 42px;
+  color: #fdfdfd;
+  margin: 40px;
 }
 .panel-left {
   width: 350px;
@@ -66,10 +83,10 @@ body {
   background-color: #1ac6b4;
 }
 .panel-left .tab-nav:first-child {
-  border-top: 1px solid #cecece;
+  border-top: 1px solid #b1b1b1;
 }
 .panel-left .left-nav .tab-nav {
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid #b1b1b1;
   padding: 14px;
 }
 .panel-left .left-nav .tab-nav.active {
@@ -106,7 +123,12 @@ body {
   overflow-y: auto;
 }
 .panel-main .middle .block {
-  padding: 0px 10px 10px 0;
+  margin: 0 0 0 10px;
+  background-color: #fbfbfb;
+}
+.panel-main .middle .block-header {
+  display: flex;
+  justify-content: space-between;
 }
 .top {
   align-items: center;
@@ -138,4 +160,80 @@ body {
 }
 ul {
   list-style: none;
+}
+.block-task {
+  padding: 20px;
+}
+.block-task .block-body {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.block-task .block-body .fa {
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  margin: 0 30px;
+}
+.block-task .block-body .fa.icon-cyan {
+  color: #1ac6b4;
+}
+.block-task .block-body .fa.icon-orange {
+  color: #ff6000;
+}
+.block-task .block-body .fa.icon-green {
+  color: #b4c61a;
+}
+.block-task .block-body > div {
+  align-items: center;
+  flex-grow: 1;
+}
+.block-task .block-body .block-content {
+  justify-content: space-between;
+}
+.block-task .block-body .block-content .content {
+  display: flex;
+  align-items: flex-end;
+}
+.block-task .block-body .schedule-block {
+  display: flex;
+  flex-direction: column;
+}
+.block-task .block-body .schedule-block .block-content {
+  justify-content: space-between;
+}
+.block-task .block-body .schedule-block .block-content.block-row {
+  min-width: 400px;
+}
+.block-task .block-body .schedule-block > div {
+  padding: 5px 20px;
+  border: 1px solid #cecece;
+  margin: 2px;
+}
+.block-task .block-body .schedule-block > .odd {
+  background-color: #fdfdfd;
+}
+.block-task .block-body .schedule-block > .even {
+  background-color: #cecece;
+}
+.btn-warning {
+  text-align: center;
+  background-color: red;
+  font-size: 1em;
+  color: #fdfdfd;
+  padding: 6px;
+  align-self: flex-start;
+}
+.nav-button {
+  line-height: 36px;
+  font-size: 1.1em;
+  background-color: #fdfdfd;
+  color: #32383d;
+}
+.nav-button:hover {
+  cursor: pointer;
+}
+.nav-button.active {
+  background-color: #32383d;
+  color: #fdfdfd;
 }
