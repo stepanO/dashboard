@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title>Dashboard</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <link rel="stylesheet" href="bower_components/font-awesome-less/css/font-awesome.css">
     <link rel="stylesheet" href="style/main.css">
     <script src="//localhost:35729/livereload.js"></script>
 </head>
-<body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+<body ng-app="myApp">
 <div class="wrapper" ng-controller="mainCtrl as ctrl">
     <div class="flex-row header">
         <div class="search">
@@ -56,12 +44,12 @@
         <div class="flex-column panel-main" flex>
             <div class="flex-row top" flex>
                 <div class="nav" flex>
-                        <button class="nav-button active">OVERVIEW</button>
-                        <button class="nav-button">MY REPORTS</button>
-                        <button class="nav-button">LEADERBOARD</button>
-                        <button class="nav-button">MY PROJECTS</button>
-                        <button class="nav-button">FORUM</button>
-                        <button class="nav-button">SEARCH</button>
+                    <button class="nav-button active">OVERVIEW</button>
+                    <button class="nav-button">MY REPORTS</button>
+                    <button class="nav-button">LEADERBOARD</button>
+                    <button class="nav-button">MY PROJECTS</button>
+                    <button class="nav-button">FORUM</button>
+                    <button class="nav-button">SEARCH</button>
                 </div>
             </div>
             <div class="flex-row middle" flex>
@@ -79,25 +67,27 @@
                 </div>
                 <div class="block block-task flex-row">
                     <div class="block-header">
-                        <h2 class="nav">Task
+                        <h2>Task</h2>
+                        <div class="handle" flex>
                             <button class="nav-button active">
                                 NEW
                             </button>
                             <button class="nav-button">
                                 FINISHED TASKS
                             </button>
-                            </ul>
-                        </h2>
-                        <div><input></div>
+                        </div>
+                        <div class="search-task"><input placeholder="Search Task"><i class="fa fa-search" aria-hidden="true"></i></div>
                     </div>
                     <div class="block-body">
                         <div class="block-content block-row" flex>
                             <div class="" flex>
                                 <i class="fa fa-check-circle icon-green" aria-hidden="true"></i>
+
                                 <div class="content" flex>
                                     <div>
-                                    <h3>Labore et dolore magrna aliqua</h3>
-                                    <p>Ut eno, ad minim veniam</p>
+                                        <h3>Labore et dolore magrna aliqua</h3>
+
+                                        <p>Ut eno, ad minim veniam</p>
                                     </div>
                                     <span class="btn-warning btn-sm">HIGH PRIORITY</span>
                                 </div>
@@ -115,6 +105,7 @@
                                 <div class="content" flex>
                                     <div>
                                         <h3>Labore et dolore magrna aliqua</h3>
+
                                         <p>Ut eno, ad minim veniam</p>
                                     </div>
                                 </div>
@@ -132,6 +123,7 @@
                                 <div class="content" flex>
                                     <div>
                                         <h3>Labore et dolore magrna aliqua</h3>
+
                                         <p>Ut eno, ad minim veniam</p>
                                     </div>
                                 </div>
@@ -155,18 +147,9 @@
         </div>
     </div>
 </div>
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<script src="bower_components/lodash/dist/lodash.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="app.js"></script>
 <script src="mainCtrl.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
-<script src="components/version/version.js"></script>
-<script src="components/version/version-directive.js"></script>
-<script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>

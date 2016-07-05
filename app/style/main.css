@@ -56,6 +56,8 @@ body {
 .header .logo img {
   width: 60px;
   height: 60px;
+  min-width: 60px;
+  min-height: 60px;
 }
 .header .personal {
   background-color: #1a1e21;
@@ -68,7 +70,8 @@ body {
   margin: 40px;
 }
 .panel-left {
-  width: 350px;
+  width: 300px;
+  min-width: 300px;
   background-color: #f5f5f5;
 }
 .panel-left .user-info {
@@ -78,7 +81,9 @@ body {
 .panel-left .user-info .circle {
   margin-right: 10px;
   width: 70px;
+  min-width: 70px;
   height: 70px;
+  min-height: 70px;
   border-radius: 35px;
   background-color: #1ac6b4;
 }
@@ -113,6 +118,7 @@ body {
 .panel-main {
   flex: 1 100%;
   background-color: #fff;
+  overflow-y: auto;
 }
 .panel-main .middle {
   display: inline-flex;
@@ -120,15 +126,27 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow-y: auto;
 }
 .panel-main .middle .block {
+  padding: 20px;
   margin: 0 0 0 10px;
   background-color: #fbfbfb;
+}
+.panel-main .middle .block.block-calendar {
+  padding: 0;
 }
 .panel-main .middle .block-header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #b1b1b1;
+}
+.panel-main .middle .block-header > .handle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-main .middle .block-header > .handle > button {
+  margin: 10px;
 }
 .top {
   align-items: center;
@@ -170,9 +188,9 @@ ul {
   margin: 30px 0;
 }
 .block-task .block-body .fa {
-  width: 100px;
-  height: 100px;
-  font-size: 100px;
+  width: 50px;
+  height: 50px;
+  font-size: 64px;
   margin: 0 30px;
 }
 .block-task .block-body .fa.icon-cyan {
@@ -203,7 +221,7 @@ ul {
   justify-content: space-between;
 }
 .block-task .block-body .schedule-block .block-content.block-row {
-  min-width: 400px;
+  min-width: 300px;
 }
 .block-task .block-body .schedule-block > div {
   padding: 5px 20px;
@@ -225,10 +243,11 @@ ul {
   align-self: flex-start;
 }
 .nav-button {
-  line-height: 36px;
-  font-size: 1.1em;
+  line-height: 24px;
+  font-size: 1em;
   background-color: #fdfdfd;
   color: #32383d;
+  border: 1px solid #b1b1b1;
 }
 .nav-button:hover {
   cursor: pointer;
@@ -236,4 +255,18 @@ ul {
 .nav-button.active {
   background-color: #32383d;
   color: #fdfdfd;
+}
+.search-task {
+  display: flex;
+  align-items: center;
+  background-color: #fdfdfd;
+  align-self: center;
+  padding: 10px;
+  border: 1px solid #b1b1b1;
+}
+.search-task > input {
+  border: 0;
+}
+.search-task > input:focus {
+  outline: 0;
 }
