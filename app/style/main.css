@@ -68,8 +68,8 @@ body {
   margin: 30px;
 }
 .panel-left {
-  width: 300px;
-  min-width: 300px;
+  width: 250px;
+  min-width: 250px;
   background-color: #f5f5f5;
 }
 .panel-left .user-info {
@@ -78,11 +78,11 @@ body {
 }
 .panel-left .user-info .circle {
   margin-right: 10px;
-  width: 70px;
-  min-width: 70px;
-  height: 70px;
-  min-height: 70px;
-  border-radius: 35px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 20px;
   background-color: #1ac6b4;
 }
 .panel-left .tab-nav:first-child {
@@ -137,6 +137,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #b1b1b1;
+  align-items: center;
 }
 .panel-main .middle .block-header > .handle {
   display: flex;
@@ -190,15 +191,6 @@ ul {
   height: 50px;
   font-size: 64px;
   margin: 0 30px;
-}
-.block-task .block-body .fa.icon-cyan {
-  color: #1ac6b4;
-}
-.block-task .block-body .fa.icon-orange {
-  color: #ff6000;
-}
-.block-task .block-body .fa.icon-green {
-  color: #b4c61a;
 }
 .block-task .block-body > div {
   align-items: center;
@@ -267,4 +259,13 @@ ul {
 }
 .search-task > input:focus {
   outline: 0;
+}
+.icon-cyan {
+  color: #1ac6b4;
+}
+.icon-orange {
+  color: #ff6000;
+}
+.icon-green {
+  color: #b4c61a;
 }

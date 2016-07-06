@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style/main.css">
     <script src="//localhost:35729/livereload.js"></script>
 </head>
-<body ng-app="myApp">
-<div class="wrapper" ng-controller="mainCtrl as ctrl">
+<body>
+<div class="wrapper">
     <div class="flex-row header">
         <div class="search">
             <input class="search-input" placeholder="Search here">
@@ -47,7 +47,7 @@
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Active Signals</span>
                 </li>
-                <li class="tab-nav" >
+                <li class="tab-nav">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Visual Charts</span>
                 </li>
@@ -87,12 +87,33 @@
             </div>
             <div class="flex-row middle" flex>
                 <div class="block block-traffic">
-                    <img src="image/graph.png">
+                    <div class="block-header">
+                        <h3>MOUNTLY TRAFFIC</h3>
+
+                        <div class="handle" flex>
+                            <select>
+                                <option>YEARLY</option>
+                                <option>MOUNTLY</option>
+                            </select>
+                        </div>
+                        <div class=""><i class="fa fa-cube icon-orange" aria-hidden="true"></i> External
+                            <i class="fa fa-cube icon-cyan" aria-hidden="true"></i> Internal
+                        </div>
+                    </div>
+                    <div class="block-body">
+                        <img src="image/graph.png">
+                    </div>
                 </div>
                 <div class="block block-referrer">
+                    <div class="block-header">
+                        <h3>REFERRER</h3>
+                    </div>
                     <img src="image/referrer.png">
                 </div>
                 <div class="block block-bookings">
+                    <div class="block-header">
+                        <h3>BOOKINGS</h3>
+                    </div>
                     <img src="image/bookings.png">
                 </div>
                 <div class="block block-calendar">
@@ -100,7 +121,8 @@
                 </div>
                 <div class="block block-task flex-row">
                     <div class="block-header">
-                        <h2>Task</h2>
+                        <h3>Task</h3>
+
                         <div class="handle" flex>
                             <button class="nav-button active">
                                 NEW
@@ -109,7 +131,9 @@
                                 FINISHED TASKS
                             </button>
                         </div>
-                        <div class="search-task"><input placeholder="Search Task"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        <div class="search-task"><input placeholder="Search Task">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <div class="block-body">
                         <div class="block-content block-row" flex>
@@ -180,9 +204,5 @@
         </div>
     </div>
 </div>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="app.js"></script>
-<script src="mainCtrl.js"></script>
 </body>
 </html>
