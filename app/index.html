@@ -4,13 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dashboard</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="bower_components/font-awesome-less/css/font-awesome.css">
+    <link rel="stylesheet" href="style/font-awesome.css">
     <link rel="stylesheet" href="style/main.css">
     <script src="//localhost:35729/livereload.js"></script>
 </head>
 <body>
 <div class="wrapper">
-    <div class="flex-row header">
+    <div class="header">
         <div class="search">
             <input class="search-input" placeholder="Search here">
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -24,8 +24,8 @@
         </div>
     </div>
     <div class="panel-content">
-        <div class="flex-column panel-left">
-            <div class="user-info" flex>
+        <div class="panel-left">
+            <div class="user-info">
                 <div class="circle"></div>
                 <div class="user-name">
                     <strong>
@@ -35,174 +35,222 @@
                 </div>
             </div>
             <ul class="left-nav">
-                <li class="tab-nav active">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>My Profile</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav active" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Dashboard</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Active Signals</span>
+                    <span class="corner"></span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Visual Charts</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-money" aria-hidden="true"></i>
                     <span>Earnings</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                     <span>Events</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-cloud" aria-hidden="true"></i>
                     <span>Cloud Systems</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-sliders" aria-hidden="true"></i>
                     <span>System Settings</span>
                 </li>
-                <li class="tab-nav">
+                <li class="tab-nav" onclick="toggleClass(this, 'active')">
                     <i class="fa fa-power-off" aria-hidden="true"></i>
                     <span>Logout</span>
                 </li>
 
             </ul>
         </div>
-        <div class="flex-column panel-main" flex>
-            <div class="flex-row top" flex>
-                <div class="nav" flex>
-                    <button class="nav-button active">OVERVIEW</button>
-                    <button class="nav-button">MY REPORTS</button>
-                    <button class="nav-button">LEADERBOARD</button>
-                    <button class="nav-button">MY PROJECTS</button>
-                    <button class="nav-button">FORUM</button>
-                    <button class="nav-button">SEARCH</button>
+        <div class="panel-main">
+            <div class="top">
+                <div class="nav">
+                    <button class="nav-button active" onclick="toggleClass(this, 'active')">OVERVIEW</button>
+                    <button class="nav-button" onclick="toggleClass(this, 'active')">MY REPORTS</button>
+                    <button class="nav-button" onclick="toggleClass(this, 'active')">LEADERBOARD</button>
+                    <button class="nav-button" onclick="toggleClass(this, 'active')">MY PROJECTS</button>
+                    <button class="nav-button" onclick="toggleClass(this, 'active')">FORUM</button>
+                    <button class="nav-button" onclick="toggleClass(this, 'active')">SEARCH</button>
                 </div>
             </div>
-            <div class="flex-row middle" flex>
-                <div class="block block-traffic">
-                    <div class="block-header">
-                        <h3>MOUNTLY TRAFFIC</h3>
+            <div class="middle">
+                <div class="chart">
+                    <div class="block block-traffic">
+                        <div class="block-header">
+                            <h3>MOUNTLY TRAFFIC</h3>
 
-                        <div class="handle" flex>
-                            <select>
-                                <option>YEARLY</option>
-                                <option>MOUNTLY</option>
-                            </select>
+                            <div class="handle">
+                                <select>
+                                    <option>YEARLY</option>
+                                    <option>MOUNTLY</option>
+                                </select>
+                            </div>
+                            <div class=""><i class="fa fa-cube icon-orange" aria-hidden="true"></i> External
+                                <i class="fa fa-cube icon-cyan" aria-hidden="true"></i> Internal
+                            </div>
                         </div>
-                        <div class=""><i class="fa fa-cube icon-orange" aria-hidden="true"></i> External
-                            <i class="fa fa-cube icon-cyan" aria-hidden="true"></i> Internal
-                        </div>
-                    </div>
-                    <div class="block-body">
-                        <img src="image/graph.png">
-                    </div>
-                </div>
-                <div class="block block-referrer">
-                    <div class="block-header">
-                        <h3>REFERRER</h3>
-                    </div>
-                    <img src="image/referrer.png">
-                </div>
-                <div class="block block-bookings">
-                    <div class="block-header">
-                        <h3>BOOKINGS</h3>
-                    </div>
-                    <img src="image/bookings.png">
-                </div>
-                <div class="block block-calendar">
-                    <img src="image/calendar.png">
-                </div>
-                <div class="block block-task flex-row">
-                    <div class="block-header">
-                        <h3>Task</h3>
-
-                        <div class="handle" flex>
-                            <button class="nav-button active">
-                                NEW
-                            </button>
-                            <button class="nav-button">
-                                FINISHED TASKS
-                            </button>
-                        </div>
-                        <div class="search-task"><input placeholder="Search Task">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                        <div class="block-body">
+                            <img src="image/graph.png">
                         </div>
                     </div>
-                    <div class="block-body">
-                        <div class="block-content block-row" flex>
-                            <div class="" flex>
-                                <i class="fa fa-check-circle icon-green" aria-hidden="true"></i>
+                    <div class="block block-referrer">
+                        <div class="block-header">
+                            <h3>REFERRER</h3>
+                        </div>
+                        <img src="image/referrer-circle.png">
 
-                                <div class="content" flex>
-                                    <div>
-                                        <h3>Labore et dolore magrna aliqua</h3>
+                        <div class="block-body">
+                            <div class="site site-1">
+                                <span class="site-cube"></span>
+                                <span>alexa.com</span>
+                            </div>
+                            <div class="site site-2">
+                                <span class="site-cube"></span>
+                                <span>google.com</span>
+                            </div>
+                            <div class="site site-3">
+                                <span class="site-cube"></span>
+                                <span>twitter.com</span>
+                            </div>
+                            <div class="site site-4">
+                                <span class="site-cube"></span>
+                                <span>facebook.com</span>
+                            </div>
 
-                                        <p>Ut eno, ad minim veniam</p>
-                                    </div>
-                                    <span class="btn-warning btn-sm">HIGH PRIORITY</span>
+                        </div>
+                    </div>
+                    <div class="block block-bookings">
+                        <div class="block-header">
+                            <h3>BOOKINGS</h3>
+                        </div>
+                        <div class="block-body">
+                            <div>
+                                <div class="count">184</div>
+                                <div class="msg">Reserved Booking</div>
+                            </div>
+                            <span class="border"></span>
+                            <div>
+                                <div class="count">240</div>
+                                <div class="msg">Advanced Booking</div>
+                            </div>
+                        </div>
+                        <button class="nav-button view-all">VIEW ALL</button>
+                        <!--<img src="image/bookings.png">-->
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="block block-calendar">
+                        <img src="image/calendar.png">
+                    </div>
+                    <div class="block block-task">
+                        <div class="block-header">
+                            <h3>TASK</h3>
+
+                            <div class="handle">
+                                <div class="buttons">
+                                    <button class="nav-button active">
+                                        NEW
+                                    </button>
+                                    <button class="nav-button">
+                                        FINISHED TASKS
+                                    </button>
                                 </div>
-
-                            </div>
-                            <div class="schedule-block">
-                                <div class="odd">Mon, Apr 8</div>
-                                <div class="even">2 Days</div>
-                            </div>
-                        </div>
-                        <div class="block-content block-row" flex>
-                            <div class="" flex>
-                                <i class="fa fa-leaf icon-orange" aria-hidden="true"></i>
-
-                                <div class="content" flex>
-                                    <div>
-                                        <h3>Labore et dolore magrna aliqua</h3>
-
-                                        <p>Ut eno, ad minim veniam</p>
-                                    </div>
+                                <div class="search-task"><input placeholder="Search Task">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>
-
-                            </div>
-                            <div class="schedule-block">
-                                <div class="odd">Mon, Apr 8</div>
-                                <div class="even">2 Days</div>
                             </div>
                         </div>
-                        <div class="block-content block-row" flex>
-                            <div class="" flex>
-                                <i class="fa fa-wifi icon-cyan" aria-hidden="true"></i>
+                        <div class="block-body">
+                            <div class="block-content block-row">
+                                <div class="">
+                                    <i class="fa fa-check-circle icon-green" aria-hidden="true"></i>
 
-                                <div class="content" flex>
-                                    <div>
-                                        <h3>Labore et dolore magrna aliqua</h3>
+                                    <div class="content">
+                                        <div>
+                                            <h3>Labore et dolore magrna aliqua</h3>
 
-                                        <p>Ut eno, ad minim veniam</p>
+                                            <p>Ut eno, ad minim veniam</p>
+                                        </div>
+                                        <span class="btn-warning btn-sm">HIGH PRIORITY</span>
                                     </div>
-                                </div>
 
+                                </div>
+                                <div class="schedule-block">
+                                    <div class="odd">Mon, Apr 8</div>
+                                    <div class="even">2 Days</div>
+                                </div>
                             </div>
-                            <div class="schedule-block">
-                                <div class="odd">Mon, Apr 8</div>
-                                <div class="even">2 Days</div>
+                            <div class="block-content">
+                                <div class="">
+                                    <i class="fa fa-leaf icon-orange" aria-hidden="true"></i>
+
+                                    <div class="content">
+                                        <div>
+                                            <h3>Labore et dolore magrna aliqua</h3>
+
+                                            <p>Ut eno, ad minim veniam</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="schedule-block">
+                                    <div class="odd">Mon, Apr 8</div>
+                                    <div class="even">2 Days</div>
+                                </div>
+                            </div>
+                            <div class="block-content">
+                                <div class="">
+                                    <i class="fa fa-wifi icon-cyan" aria-hidden="true"></i>
+
+                                    <div class="content">
+                                        <div>
+                                            <h3>Labore et dolore magrna aliqua</h3>
+
+                                            <p>Ut eno, ad minim veniam</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="schedule-block">
+                                    <div class="odd">Mon, Apr 8</div>
+                                    <div class="even">2 Days</div>
+                                </div>
                             </div>
                         </div>
+                        <!--<img src="image/task.png">-->
                     </div>
-                    <!--<img src="image/task.png">-->
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="flex-row bottom">
+    <div class="bottom">
         <div>
             footer
         </div>
     </div>
 </div>
+<script type="application/javascript">
+    function toggleClass(el, className) {
+        if (el.classList.contains(className)) {
+            el.classList.remove(className);
+        } else {
+            el.classList.add(className);
+        }
+    }
+</script>
 </body>
 </html>

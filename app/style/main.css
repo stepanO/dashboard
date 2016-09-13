@@ -67,13 +67,18 @@ body {
   color: #fdfdfd;
   margin: 30px;
 }
+.box-shadow {
+  box-shadow: inset -7px 0 9px -7px #b1b1b1;
+}
 .panel-left {
+  display: flex;
   width: 250px;
   min-width: 250px;
   background-color: #f5f5f5;
+  box-shadow: inset -7px 0 9px -7px #b1b1b1;
 }
 .panel-left .user-info {
-  margin: 10px 10px 0;
+  margin: 20px 10px 10px;
   align-items: center;
 }
 .panel-left .user-info .circle {
@@ -85,25 +90,48 @@ body {
   border-radius: 20px;
   background-color: #1ac6b4;
 }
+.panel-left .user-info .user-name strong div:first-child {
+  font-size: 14px;
+  font-weight: normal;
+}
 .panel-left .tab-nav:first-child {
   border-top: 1px solid #b1b1b1;
 }
+.panel-left .left-nav {
+  display: flex;
+  flex-direction: column;
+}
 .panel-left .left-nav .tab-nav {
   border-bottom: 1px solid #b1b1b1;
-  padding: 14px;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  align-items: center;
+}
+.panel-left .left-nav .tab-nav > span {
+  flex-grow: 1;
 }
 .panel-left .left-nav .tab-nav.active {
   background-color: #1ac6b4;
   color: #f5f5f5;
+  box-shadow: inset -7px 0 9px -7px #b1b1b1;
+}
+.panel-left .left-nav .tab-nav.active:after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "\f0d9";
+  color: white;
+  text-shadow: -1px 0px 3px #b1b1b1;
+  margin-right: -1px;
 }
 .panel-left .left-nav .tab-nav .fa {
   font-size: 24px;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 .panel-left .left-nav .tab-nav:hover {
   background-color: #dcdcdc;
-  font-size: 18px;
-  transition: color 0.3s, font-size 0.3s;
+  transition: color 0.3s;
 }
 .panel-left .left-nav .tab-nav:hover.active {
   background-color: #2fe4d1;
@@ -117,35 +145,97 @@ body {
   flex: 1 100%;
   background-color: #fff;
   overflow-y: auto;
+  padding-left: 20px;
 }
 .panel-main .middle {
-  display: inline-flex;
-  flex: 1;
-  flex-wrap: wrap;
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
+.panel-main .middle > div {
+  display: flex;
+}
 .panel-main .middle .block {
-  padding: 20px;
-  margin: 0 0 0 10px;
+  margin: 0 10px 10px 0;
   background-color: #fbfbfb;
+}
+.panel-main .middle .block h3 {
+  margin: 0;
 }
 .panel-main .middle .block.block-calendar {
   padding: 0;
+}
+.panel-main .middle .block .block-body {
+  padding: 0 20px 20px;
+}
+.panel-main .middle .block.block-referrer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.panel-main .middle .block.block-referrer img {
+  align-self: center;
+  margin: 20px 0;
+}
+.panel-main .middle .block.block-referrer .block-body {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.panel-main .middle .block.block-referrer .block-body .site-cube {
+  padding: 9px;
+}
+.panel-main .middle .block.block-referrer .block-body .site {
+  display: flex;
+  margin-top: 10px;
+}
+.panel-main .middle .block.block-referrer .block-body .site > span:last-child {
+  margin-left: 10px;
+}
+.panel-main .middle .block.block-referrer .block-body .site-1 .site-cube {
+  background-color: #1bc6b4;
+}
+.panel-main .middle .block.block-referrer .block-body .site-2 .site-cube {
+  background-color: #1bc65c;
+}
+.panel-main .middle .block.block-referrer .block-body .site-3 .site-cube {
+  background-color: #b4c61a;
+}
+.panel-main .middle .block.block-referrer .block-body .site-4 .site-cube {
+  background-color: #ff6100;
+}
+.panel-main .middle .block-task .block-header {
+  justify-content: flex-start;
 }
 .panel-main .middle .block-header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #b1b1b1;
   align-items: center;
+  padding: 20px;
+}
+.panel-main .middle .block-header h3 {
+  margin: 0;
 }
 .panel-main .middle .block-header > .handle {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
+  margin-left: 25px;
 }
-.panel-main .middle .block-header > .handle > button {
-  margin: 10px;
+.panel-main .middle .block-header > .handle .buttons {
+  display: flex;
+  flex-shrink: 0;
+}
+.panel-main .middle .block-header > .handle .buttons > button {
+  font-size: 13px;
+  padding: 8px 12px;
+  margin-right: 5px;
+}
+.btn-simple {
+  font-size: 13px;
+  padding: 8px 12px;
 }
 .top {
   align-items: center;
@@ -161,6 +251,9 @@ body {
   padding: 10px;
   margin: 15px;
   border: 1px solid #ececec;
+}
+.top .nav .nav-button:first-child {
+  margin-left: 0;
 }
 .top .nav .nav-button a {
   text-decoration: none;
@@ -178,26 +271,24 @@ body {
 ul {
   list-style: none;
 }
-.block-task {
-  padding: 20px;
-}
 .block-task .block-body {
   display: flex;
   flex-direction: column;
   margin: 30px 0;
 }
 .block-task .block-body .fa {
-  width: 50px;
-  height: 50px;
   font-size: 64px;
-  margin: 0 30px;
 }
 .block-task .block-body > div {
   align-items: center;
   flex-grow: 1;
 }
 .block-task .block-body .block-content {
+  display: flex;
   justify-content: space-between;
+}
+.block-task .block-body .block-content > div {
+  display: flex;
 }
 .block-task .block-body .block-content .content {
   display: flex;
@@ -206,6 +297,7 @@ ul {
 .block-task .block-body .schedule-block {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 .block-task .block-body .schedule-block .block-content {
   justify-content: space-between;
@@ -224,13 +316,49 @@ ul {
 .block-task .block-body .schedule-block > .even {
   background-color: #cecece;
 }
+.block-bookings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.block-bookings .block-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 15px 0;
+}
+.block-bookings .block-body .count {
+  font-size: 56px;
+  font-weight: bold;
+}
+.block-bookings .block-body .border {
+  border-bottom: 1px solid #cecece;
+}
+.block-bookings .block-body div:first-child .count {
+  color: #1dc6b5;
+}
+.block-bookings .block-body div:last-child .count {
+  color: #ff5f01;
+}
+.block-bookings .block-body .msg {
+  flex-shrink: 0;
+}
+.block-bookings .nav-button {
+  margin: 0 auto 25px auto;
+  font-size: 13px;
+  padding: 8px 12px;
+  color: #32383d;
+}
 .btn-warning {
   text-align: center;
   background-color: red;
   font-size: 1em;
   color: #fdfdfd;
-  padding: 6px;
+  outline: 6px solid red;
   align-self: flex-start;
+  margin: 0 15px;
+  flex-shrink: 0;
 }
 .nav-button {
   line-height: 24px;
@@ -251,7 +379,7 @@ ul {
   align-items: center;
   background-color: #fdfdfd;
   align-self: center;
-  padding: 10px;
+  padding: 6px;
   border: 1px solid #b1b1b1;
 }
 .search-task > input {
